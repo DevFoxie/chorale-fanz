@@ -83,7 +83,7 @@ class UserController extends Controller
             'lastname' => 'sometimes|string|max:255',
             'email' => 'sometimes|string|email|max:255|unique:users,email,' . $user->id,
             'password' => 'sometimes|string|min:8',
-            'avatar' => 'nullable|image|max:1024', // Max 1MB
+            'avatar' => 'nullable|image|max:1024',
         ]);
 
         if (isset($validated['password'])) {
